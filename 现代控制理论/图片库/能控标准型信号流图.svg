@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 20 1560 660" width="1560" height="660">
+  <defs>
+    <marker id="bDark" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" refX="15.5" refY="9" orient="auto" viewBox="0 0 18 18">
+      <path d="M1,1.4 L17,9 L1,16.6 Z" fill="#111111"/>
+    </marker>
+    <marker id="bGreen" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" refX="15.5" refY="9" orient="auto" viewBox="0 0 18 18">
+      <path d="M1,1.4 L17,9 L1,16.6 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="bBlue" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" refX="15.5" refY="9" orient="auto" viewBox="0 0 18 18">
+      <path d="M1,1.4 L17,9 L1,16.6 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1700" height="760" fill="#ffffff"/>
+
+  <!-- ===== 输入 u 与求和点 ===== -->
+  <circle cx="110" cy="310" r="8" fill="#111111"/>
+  <text x="170" y="294" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="34" fill="#111111">u</text>
+  <line x1="118" y1="310" x2="222" y2="310" stroke="#111111" stroke-width="3.5" marker-end="url(#bDark)"/>
+
+  <circle cx="280" cy="310" r="54" fill="#f2f2f2" stroke="#111111" stroke-width="3.5"/>
+  <text x="280" y="326" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#111111">&#931;</text>
+
+  <!-- ===== 积分器串联链 ===== -->
+  <line x1="334" y1="310" x2="368" y2="310" stroke="#111111" stroke-width="3.5" marker-end="url(#bDark)"/>
+
+  <rect x="370" y="272" width="110" height="76" rx="8" fill="#fbfbfb" stroke="#111111" stroke-width="4"/>
+  <text x="425" y="324" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="32" fill="#111111">1/s</text>
+
+  <rect x="700" y="272" width="110" height="76" rx="8" fill="#fbfbfb" stroke="#111111" stroke-width="4"/>
+  <text x="755" y="324" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="32" fill="#111111">1/s</text>
+
+  <rect x="1070" y="272" width="110" height="76" rx="8" fill="#fbfbfb" stroke="#111111" stroke-width="4"/>
+  <text x="1125" y="324" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="32" fill="#111111">1/s</text>
+
+  <line x1="480" y1="310" x2="698" y2="310" stroke="#111111" stroke-width="3.5" marker-end="url(#bDark)"/>
+  <line x1="810" y1="310" x2="1068" y2="310" stroke="#111111" stroke-width="3.5" marker-end="url(#bDark)"/>
+  <line x1="1180" y1="310" x2="1238" y2="310" stroke="#111111" stroke-width="3.5" marker-end="url(#bDark)"/>
+
+  <!-- ===== 状态节点 ===== -->
+  <circle cx="560" cy="310" r="9" fill="#111111"/>
+  <circle cx="930" cy="310" r="9" fill="#111111"/>
+  <circle cx="1240" cy="310" r="9" fill="#111111"/>
+
+  <text x="580" y="370" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#111111">x<tspan font-size="21" dy="6">3</tspan><tspan font-size="30" dy="-6"> = z</tspan><tspan font-size="21" dy="-6">&#8243;</tspan></text>
+  <text x="950" y="370" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#111111">x<tspan font-size="21" dy="6">2</tspan><tspan font-size="30" dy="-6"> = z</tspan><tspan font-size="21" dy="-6">&#8242;</tspan></text>
+  <text x="1260" y="370" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#111111">x<tspan font-size="21" dy="6">1</tspan><tspan font-size="30" dy="-6"> = z</tspan></text>
+
+  <!-- ===== 反馈支路（分母系数取负） ===== -->
+  <path d="M 560 310 L 560 440 L 330 440 L 330 330.4" fill="none" stroke="#2e7d32" stroke-width="3.5" marker-end="url(#bGreen)"/>
+  <path d="M 930 310 L 930 540 L 305 540 L 305 357.9" fill="none" stroke="#2e7d32" stroke-width="3.5" marker-end="url(#bGreen)"/>
+  <path d="M 1240 310 L 1240 640 L 280 640 L 280 364" fill="none" stroke="#2e7d32" stroke-width="3.5" marker-end="url(#bGreen)"/>
+
+  <text x="430" y="426" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#2e7d32">&#8722;a<tspan font-size="21" dy="6">1</tspan></text>
+  <text x="620" y="526" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#2e7d32">&#8722;a<tspan font-size="21" dy="6">2</tspan></text>
+  <text x="800" y="626" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#2e7d32">&#8722;a<tspan font-size="21" dy="6">3</tspan></text>
+
+  <!-- ===== 输出支路：分子部分 ===== -->
+  <line x1="560" y1="310" x2="560" y2="220" stroke="#1565c0" stroke-width="3"/>
+  <line x1="930" y1="310" x2="930" y2="220" stroke="#1565c0" stroke-width="3"/>
+  <line x1="1240" y1="310" x2="1240" y2="220" stroke="#1565c0" stroke-width="3"/>
+
+  <line x1="560" y1="220" x2="1390.1" y2="153.2" stroke="#1565c0" stroke-width="3" marker-end="url(#bBlue)"/>
+  <line x1="930" y1="220" x2="1390.4" y2="155.5" stroke="#1565c0" stroke-width="3" marker-end="url(#bBlue)"/>
+  <line x1="1240" y1="220" x2="1392.5" y2="163.8" stroke="#1565c0" stroke-width="3" marker-end="url(#bBlue)"/>
+
+  <text x="1000" y="172" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#1565c0">c<tspan font-size="21" dy="6">1</tspan></text>
+  <text x="1180" y="176" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#1565c0">c<tspan font-size="21" dy="6">2</tspan></text>
+  <text x="1322" y="180" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#1565c0">c<tspan font-size="21" dy="6">3</tspan></text>
+
+  <!-- 直通支路 b0 -->
+  <path d="M 110 310 L 110 80 L 1430 80 L 1430 110" fill="none" stroke="#1565c0" stroke-width="3" marker-end="url(#bBlue)"/>
+  <text x="700" y="68" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#1565c0">b<tspan font-size="21" dy="6">0</tspan></text>
+
+  <!-- 输出节点 y -->
+  <circle cx="1430" cy="150" r="40" fill="#eef4fb" stroke="#1565c0" stroke-width="3.5"/>
+  <text x="1430" y="164" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="38" fill="#1565c0">y</text>
+  <line x1="1470" y1="150" x2="1548" y2="150" stroke="#1565c0" stroke-width="3.5" marker-end="url(#bBlue)"/>
+</svg>
