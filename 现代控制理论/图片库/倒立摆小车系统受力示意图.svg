@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 205 1140 645" width="1140" height="645">
+  <defs>
+    <pattern id="ground" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="26" stroke="#3a3a3a" stroke-width="3.2"/>
+    </pattern>
+    <pattern id="bob" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="11" stroke="#3a3a3a" stroke-width="2.6"/>
+    </pattern>
+
+    <marker id="mBlue" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" refX="17" refY="10" orient="auto" viewBox="0 0 20 20">
+      <path d="M1,1.5 L19,10 L1,18.5 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="mGreen" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" refX="17" refY="10" orient="auto" viewBox="0 0 20 20">
+      <path d="M1,1.5 L19,10 L1,18.5 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="mRed" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" refX="17" refY="10" orient="auto" viewBox="0 0 20 20">
+      <path d="M1,1.5 L19,10 L1,18.5 Z" fill="#c62828"/>
+    </marker>
+    <marker id="mGray" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="13.6" refY="8" orient="auto" viewBox="0 0 16 16">
+      <path d="M0.8,1.2 L15.2,8 L0.8,14.8 Z" fill="#5a5a5a"/>
+    </marker>
+    <marker id="mDark" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="13.6" refY="8" orient="auto" viewBox="0 0 16 16">
+      <path d="M0.8,1.2 L15.2,8 L0.8,14.8 Z" fill="#333333"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="900" fill="#ffffff"/>
+
+  <!-- 轨道与地面剖面线 -->
+  <rect x="60" y="741" width="1080" height="30" fill="url(#ground)"/>
+  <line x1="60" y1="740" x2="1140" y2="740" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- 位移参考位置的固定墙面 -->
+  <line x1="180" y1="658" x2="180" y2="740" stroke="#111111" stroke-width="4"/>
+  <line x1="180" y1="662" x2="158" y2="678" stroke="#111111" stroke-width="3"/>
+  <line x1="180" y1="678" x2="158" y2="694" stroke="#111111" stroke-width="3"/>
+  <line x1="180" y1="694" x2="158" y2="710" stroke="#111111" stroke-width="3"/>
+  <line x1="180" y1="710" x2="158" y2="726" stroke="#111111" stroke-width="3"/>
+  <line x1="180" y1="726" x2="158" y2="742" stroke="#111111" stroke-width="3"/>
+
+  <!-- 小车 -->
+  <rect x="430" y="610" width="300" height="90" rx="8" fill="#fbfbfb" stroke="#111111" stroke-width="4"/>
+  <circle cx="480" cy="718" r="22" fill="#fbfbfb" stroke="#111111" stroke-width="4"/>
+  <circle cx="680" cy="718" r="22" fill="#fbfbfb" stroke="#111111" stroke-width="4"/>
+  <text x="580" y="678" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="36" fill="#111111">M</text>
+
+  <!-- 控制输入 u -->
+  <line x1="296" y1="656" x2="422" y2="656" stroke="#1565c0" stroke-width="5" marker-end="url(#mBlue)"/>
+  <text x="350" y="636" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="36" fill="#1565c0">u</text>
+
+  <!-- 摆角扇形底色 -->
+  <path d="M 580 610 L 580 460 A 150 150 0 0 1 631.3 469.0 Z" fill="#1565c0" fill-opacity="0.07"/>
+
+  <!-- 铰点 -->
+  <circle cx="580" cy="610" r="9" fill="#111111"/>
+
+  <!-- 摆杆（双线，表示有粗细的杆） -->
+  <line x1="585.2" y1="611.9" x2="701.5" y2="292.4" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
+  <line x1="574.8" y1="608.1" x2="691.1" y2="288.6" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- 摆球 -->
+  <circle cx="696.3" cy="290.5" r="26" fill="url(#bob)" stroke="#111111" stroke-width="4"/>
+
+  <!-- 竖直参考虚线与摆角 theta -->
+  <line x1="580" y1="530" x2="580" y2="230" stroke="#666666" stroke-width="3" stroke-dasharray="12 9" stroke-linecap="round"/>
+  <path d="M 580 460 A 150 150 0 0 1 631.3 469.0" fill="none" stroke="#333333" stroke-width="3.5" marker-end="url(#mDark)"/>
+  <text x="612" y="438" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="40" fill="#333333">&#952;</text>
+  <text x="668" y="468" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="38" fill="#333333">l</text>
+
+  <!-- 摆球重力 mg -->
+  <line x1="696.3" y1="318" x2="696.3" y2="424" stroke="#c62828" stroke-width="5" marker-end="url(#mRed)"/>
+  <text x="716" y="384" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="36" fill="#c62828">mg</text>
+
+  <!-- 铰点处小车对摆杆的作用力 H、V -->
+  <line x1="466" y1="590" x2="556" y2="590" stroke="#2e7d32" stroke-width="5" marker-end="url(#mGreen)"/>
+  <text x="486" y="574" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="36" fill="#2e7d32">H</text>
+  <line x1="580" y1="600" x2="580" y2="548" stroke="#2e7d32" stroke-width="5" marker-end="url(#mGreen)"/>
+  <text x="554" y="572" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="36" fill="#2e7d32">V</text>
+
+  <!-- 小车位移 y 的标注 -->
+  <line x1="180" y1="746" x2="180" y2="824" stroke="#5a5a5a" stroke-width="2.5"/>
+  <line x1="580" y1="746" x2="580" y2="824" stroke="#5a5a5a" stroke-width="2.5"/>
+  <line x1="180" y1="812" x2="580" y2="812" stroke="#5a5a5a" stroke-width="2.5" marker-start="url(#mGray)" marker-end="url(#mGray)"/>
+  <text x="376" y="802" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="36" fill="#5a5a5a">y</text>
+</svg>
