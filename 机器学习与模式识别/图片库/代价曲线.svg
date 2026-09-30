@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 1080" width="1900" height="1080">
+  <defs>
+    <marker id="mkRed" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="13.6" refY="8" orient="auto" viewBox="0 0 16 16">
+      <path d="M0.8,1.2 L15.2,8 L0.8,14.8 Z" fill="#c62828"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1900" height="1080" fill="#ffffff"/>
+
+  <!-- ==================== 左：ROC + 等代价线 ==================== -->
+  <text x="100" y="88" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="30" font-weight="bold" fill="#111111">① 在 ROC 上找出代价最优的操作点</text>
+
+  <!-- 坐标轴 -->
+  <line x1="160" y1="900" x2="640" y2="900" stroke="#111111" stroke-width="3"/>
+  <line x1="160" y1="900" x2="160" y2="240" stroke="#111111" stroke-width="3"/>
+
+  <!-- x 刻度 -->
+  <line x1="160" y1="895" x2="160" y2="905" stroke="#111111" stroke-width="3"/>
+  <line x1="275" y1="895" x2="275" y2="905" stroke="#111111" stroke-width="3"/>
+  <line x1="390" y1="895" x2="390" y2="905" stroke="#111111" stroke-width="3"/>
+  <line x1="505" y1="895" x2="505" y2="905" stroke="#111111" stroke-width="3"/>
+  <line x1="620" y1="895" x2="620" y2="905" stroke="#111111" stroke-width="3"/>
+  <text x="160" y="933" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">0</text>
+  <text x="275" y="933" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">1/4</text>
+  <text x="390" y="933" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">1/2</text>
+  <text x="505" y="933" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">3/4</text>
+  <text x="620" y="933" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">1</text>
+
+  <!-- y 刻度 -->
+  <line x1="155" y1="900" x2="165" y2="900" stroke="#111111" stroke-width="3"/>
+  <line x1="155" y1="735" x2="165" y2="735" stroke="#111111" stroke-width="3"/>
+  <line x1="155" y1="570" x2="165" y2="570" stroke="#111111" stroke-width="3"/>
+  <line x1="155" y1="405" x2="165" y2="405" stroke="#111111" stroke-width="3"/>
+  <line x1="155" y1="240" x2="165" y2="240" stroke="#111111" stroke-width="3"/>
+  <text x="145" y="908" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">0</text>
+  <text x="145" y="743" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">1/4</text>
+  <text x="145" y="578" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">1/2</text>
+  <text x="145" y="413" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">3/4</text>
+  <text x="145" y="248" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">1</text>
+
+  <!-- 随机猜测线 -->
+  <line x1="160" y1="900" x2="620" y2="240" stroke="#aaaaaa" stroke-width="2.5" stroke-dasharray="11 8"/>
+
+  <!-- ROC 阶梯 -->
+  <polyline points="160,900 160,735 160,570 275,570 390,570 505,570 505,405 505,240 620,240"
+            fill="none" stroke="#111111" stroke-width="5" stroke-linejoin="miter"/>
+
+  <!-- 等代价线（斜率 0.25） -->
+  <line x1="205" y1="348" x2="585" y2="211" stroke="#e65100" stroke-width="3.5"/>
+  <text x="210" y="386" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="22" fill="#e65100">等代价线（斜率 0.25）</text>
+
+  <!-- 最优点 -->
+  <circle cx="505" cy="240" r="10" fill="#c62828"/>
+  <text x="505" y="212" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#c62828">最优点 (FPR=0.75, TPR=1)</text>
+
+  <text x="400" y="985" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#111111">FPR</text>
+  <text x="95" y="570" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#111111" transform="rotate(-90 95 570)">TPR</text>
+
+  <!-- ==================== 右：代价曲线 ==================== -->
+  <text x="1000" y="88" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="30" font-weight="bold" fill="#111111">② 代价曲线 = 所有操作点直线的下包络</text>
+
+  <!-- 坐标轴 -->
+  <line x1="1050" y1="900" x2="1790" y2="900" stroke="#111111" stroke-width="3"/>
+  <line x1="1050" y1="900" x2="1050" y2="200" stroke="#111111" stroke-width="3"/>
+
+  <!-- x 刻度 -->
+  <line x1="1050" y1="895" x2="1050" y2="905" stroke="#111111" stroke-width="3"/>
+  <line x1="1225" y1="895" x2="1225" y2="905" stroke="#111111" stroke-width="3"/>
+  <line x1="1400" y1="895" x2="1400" y2="905" stroke="#111111" stroke-width="3"/>
+  <line x1="1575" y1="895" x2="1575" y2="905" stroke="#111111" stroke-width="3"/>
+  <line x1="1750" y1="895" x2="1750" y2="905" stroke="#111111" stroke-width="3"/>
+  <text x="1050" y="933" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">0</text>
+  <text x="1225" y="933" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">1/4</text>
+  <text x="1400" y="933" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">1/2</text>
+  <text x="1575" y="933" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">3/4</text>
+  <text x="1750" y="933" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">1</text>
+
+  <!-- y 刻度 -->
+  <line x1="1045" y1="900" x2="1055" y2="900" stroke="#111111" stroke-width="3"/>
+  <line x1="1045" y1="725" x2="1055" y2="725" stroke="#111111" stroke-width="3"/>
+  <line x1="1045" y1="550" x2="1055" y2="550" stroke="#111111" stroke-width="3"/>
+  <line x1="1045" y1="375" x2="1055" y2="375" stroke="#111111" stroke-width="3"/>
+  <line x1="1045" y1="200" x2="1055" y2="200" stroke="#111111" stroke-width="3"/>
+  <text x="1035" y="908" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">0</text>
+  <text x="1035" y="733" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">1/4</text>
+  <text x="1035" y="558" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">1/2</text>
+  <text x="1035" y="383" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">3/4</text>
+  <text x="1035" y="208" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">1</text>
+
+  <!-- 平凡策略（随机基线） -->
+  <line x1="1050" y1="900" x2="1750" y2="200" stroke="#777777" stroke-width="2.5" stroke-dasharray="11 8"/>
+  <line x1="1050" y1="200" x2="1750" y2="900" stroke="#777777" stroke-width="2.5" stroke-dasharray="11 8"/>
+
+  <!-- 各操作点对应的直线 -->
+  <line x1="1050" y1="900" x2="1750" y2="375" stroke="#c8c8c8" stroke-width="2"/>
+  <line x1="1050" y1="900" x2="1750" y2="550" stroke="#c8c8c8" stroke-width="2"/>
+  <line x1="1050" y1="725" x2="1750" y2="550" stroke="#c8c8c8" stroke-width="2"/>
+  <line x1="1050" y1="550" x2="1750" y2="550" stroke="#c8c8c8" stroke-width="2"/>
+  <line x1="1050" y1="375" x2="1750" y2="550" stroke="#c8c8c8" stroke-width="2"/>
+  <line x1="1050" y1="375" x2="1750" y2="725" stroke="#c8c8c8" stroke-width="2"/>
+  <line x1="1050" y1="375" x2="1750" y2="900" stroke="#c8c8c8" stroke-width="2"/>
+
+  <!-- 代价曲线（下包络） -->
+  <polyline points="1050,900 1470,690 1750,900" fill="none" stroke="#111111" stroke-width="6" stroke-linejoin="miter"/>
+
+  <!-- PCF = 0.8 处的最优点 -->
+  <line x1="1610" y1="795" x2="1610" y2="900" stroke="#c62828" stroke-width="2.5" stroke-dasharray="8 7"/>
+  <circle cx="1610" cy="795" r="10" fill="#c62828"/>
+  <text x="1626" y="782" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#c62828">NEC = 0.15</text>
+  <text x="1610" y="968" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#c62828">PCF = 0.8</text>
+
+  <text x="1400" y="1000" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#111111">正例概率代价 PCF(+)</text>
+  <text x="975" y="550" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#111111" transform="rotate(-90 975 550)">归一化期望代价 NEC</text>
+
+  <text x="1400" y="1038" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="22" fill="#555555">粗线 = 代价曲线（下包络）　细线 = 各操作点对应的直线</text>
+  <text x="1400" y="1070" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="22" fill="#555555">灰色虚线 = 平凡策略（全判反 / 全判正）构成的随机基线</text>
+</svg>
