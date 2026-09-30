@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1000" width="1800" height="1000">
+  <defs>
+    <marker id="arwBlue" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" refX="15.5" refY="9" orient="auto" viewBox="0 0 18 18">
+      <path d="M1,1.4 L17,9 L1,16.6 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arwOrange" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" refX="15.5" refY="9" orient="auto" viewBox="0 0 18 18">
+      <path d="M1,1.4 L17,9 L1,16.6 Z" fill="#e65100"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1800" height="1000" fill="#ffffff"/>
+
+  <!-- ================= 左：样本按分数排列 + 阈值扫描 ================= -->
+  <text x="80" y="96" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="30" font-weight="bold" fill="#111111">① 样本按分数从高到低排列（P = 4，N = 4）</text>
+
+  <!-- 阈值以上区域（判为正类） -->
+  <rect x="170" y="140" width="390" height="385" fill="#1565c0" fill-opacity="0.06"/>
+
+  <!-- 分数坐标轴 -->
+  <line x1="300" y1="140" x2="300" y2="840" stroke="#111111" stroke-width="3"/>
+  <line x1="292" y1="140" x2="308" y2="140" stroke="#111111" stroke-width="3"/>
+  <line x1="292" y1="280" x2="308" y2="280" stroke="#111111" stroke-width="3"/>
+  <line x1="292" y1="420" x2="308" y2="420" stroke="#111111" stroke-width="3"/>
+  <line x1="292" y1="560" x2="308" y2="560" stroke="#111111" stroke-width="3"/>
+  <line x1="292" y1="700" x2="308" y2="700" stroke="#111111" stroke-width="3"/>
+  <line x1="292" y1="840" x2="308" y2="840" stroke="#111111" stroke-width="3"/>
+
+  <text x="282" y="148" text-anchor="end" font-family="Georgia, serif" font-size="24" fill="#555555">1.0</text>
+  <text x="282" y="288" text-anchor="end" font-family="Georgia, serif" font-size="24" fill="#555555">0.8</text>
+  <text x="282" y="428" text-anchor="end" font-family="Georgia, serif" font-size="24" fill="#555555">0.6</text>
+  <text x="282" y="568" text-anchor="end" font-family="Georgia, serif" font-size="24" fill="#555555">0.4</text>
+  <text x="282" y="708" text-anchor="end" font-family="Georgia, serif" font-size="24" fill="#555555">0.2</text>
+  <text x="282" y="848" text-anchor="end" font-family="Georgia, serif" font-size="24" fill="#555555">0</text>
+  <text x="300" y="884" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="25" fill="#555555">分数</text>
+
+  <!-- 图例 -->
+  <circle cx="132" cy="196" r="11" fill="#1565c0" stroke="#0d47a1" stroke-width="3"/>
+  <text x="154" y="205" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#333333">正类 P = 4</text>
+  <circle cx="132" cy="240" r="11" fill="#ffffff" stroke="#c62828" stroke-width="4"/>
+  <text x="154" y="249" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#333333">反类 N = 4</text>
+
+  <!-- 阈值线 -->
+  <line x1="170" y1="525" x2="560" y2="525" stroke="#e65100" stroke-width="3.5" stroke-dasharray="13 9"/>
+  <text x="570" y="534" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="25" fill="#e65100">阈值 t</text>
+
+  <!-- 样本点 -->
+  <circle cx="300" cy="210" r="14" fill="#1565c0" stroke="#0d47a1" stroke-width="3"/>
+  <text x="326" y="219" font-family="Georgia, serif" font-size="24" fill="#333333">0.9</text>
+  <circle cx="300" cy="280" r="14" fill="#1565c0" stroke="#0d47a1" stroke-width="3"/>
+  <text x="326" y="289" font-family="Georgia, serif" font-size="24" fill="#333333">0.8</text>
+  <circle cx="300" cy="350" r="14" fill="#ffffff" stroke="#c62828" stroke-width="4"/>
+  <text x="326" y="359" font-family="Georgia, serif" font-size="24" fill="#333333">0.7</text>
+  <circle cx="300" cy="420" r="14" fill="#ffffff" stroke="#c62828" stroke-width="4"/>
+  <text x="326" y="429" font-family="Georgia, serif" font-size="24" fill="#333333">0.6</text>
+  <circle cx="300" cy="490" r="14" fill="#ffffff" stroke="#c62828" stroke-width="4"/>
+  <text x="326" y="499" font-family="Georgia, serif" font-size="24" fill="#333333">0.5</text>
+  <circle cx="300" cy="560" r="14" fill="#1565c0" stroke="#0d47a1" stroke-width="3"/>
+  <text x="326" y="569" font-family="Georgia, serif" font-size="24" fill="#333333">0.4</text>
+  <circle cx="300" cy="630" r="14" fill="#1565c0" stroke="#0d47a1" stroke-width="3"/>
+  <text x="326" y="639" font-family="Georgia, serif" font-size="24" fill="#333333">0.3</text>
+  <circle cx="300" cy="700" r="14" fill="#ffffff" stroke="#c62828" stroke-width="4"/>
+  <text x="326" y="709" font-family="Georgia, serif" font-size="24" fill="#333333">0.2</text>
+
+  <text x="300" y="940" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="25" fill="#555555">阈值从高到低扫一遍，样本被逐个划入正类</text>
+
+  <!-- ================= 右：ROC 阶梯曲线 ================= -->
+  <text x="950" y="96" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="30" font-weight="bold" fill="#111111">② 由此得到 ROC 阶梯曲线（1/P = 1/N = 1/4）</text>
+
+  <!-- AUC 阴影 -->
+  <polygon points="950,850 950,500 1415,500 1415,150 1570,150 1570,850" fill="#1565c0" fill-opacity="0.10"/>
+
+  <!-- 坐标轴 -->
+  <line x1="950" y1="850" x2="1600" y2="850" stroke="#111111" stroke-width="3"/>
+  <line x1="950" y1="850" x2="950" y2="130" stroke="#111111" stroke-width="3"/>
+
+  <!-- x 轴刻度 -->
+  <line x1="950" y1="845" x2="950" y2="855" stroke="#111111" stroke-width="3"/>
+  <line x1="1105" y1="845" x2="1105" y2="855" stroke="#111111" stroke-width="3"/>
+  <line x1="1260" y1="845" x2="1260" y2="855" stroke="#111111" stroke-width="3"/>
+  <line x1="1415" y1="845" x2="1415" y2="855" stroke="#111111" stroke-width="3"/>
+  <line x1="1570" y1="845" x2="1570" y2="855" stroke="#111111" stroke-width="3"/>
+  <text x="950" y="888" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#555555">0</text>
+  <text x="1105" y="888" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#555555">1/4</text>
+  <text x="1260" y="888" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#555555">1/2</text>
+  <text x="1415" y="888" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#555555">3/4</text>
+  <text x="1570" y="888" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#555555">1</text>
+
+  <!-- y 轴刻度 -->
+  <line x1="945" y1="850" x2="955" y2="850" stroke="#111111" stroke-width="3"/>
+  <line x1="945" y1="675" x2="955" y2="675" stroke="#111111" stroke-width="3"/>
+  <line x1="945" y1="500" x2="955" y2="500" stroke="#111111" stroke-width="3"/>
+  <line x1="945" y1="325" x2="955" y2="325" stroke="#111111" stroke-width="3"/>
+  <line x1="945" y1="150" x2="955" y2="150" stroke="#111111" stroke-width="3"/>
+  <text x="935" y="858" text-anchor="end" font-family="Georgia, serif" font-size="24" fill="#555555">0</text>
+  <text x="935" y="683" text-anchor="end" font-family="Georgia, serif" font-size="24" fill="#555555">1/4</text>
+  <text x="935" y="508" text-anchor="end" font-family="Georgia, serif" font-size="24" fill="#555555">1/2</text>
+  <text x="935" y="333" text-anchor="end" font-family="Georgia, serif" font-size="24" fill="#555555">3/4</text>
+  <text x="935" y="158" text-anchor="end" font-family="Georgia, serif" font-size="24" fill="#555555">1</text>
+
+  <!-- 随机猜测线 -->
+  <line x1="950" y1="850" x2="1570" y2="150" stroke="#888888" stroke-width="3" stroke-dasharray="13 9"/>
+  <text x="1120" y="640" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#666666">随机猜测线（AUC = 0.5）</text>
+
+  <!-- ROC 阶梯 -->
+  <polyline points="950,850 950,675 950,500 1105,500 1260,500 1415,500 1415,325 1415,150 1570,150"
+            fill="none" stroke="#111111" stroke-width="5" stroke-linejoin="miter"/>
+  <circle cx="950" cy="850" r="6" fill="#111111"/>
+  <circle cx="950" cy="675" r="6" fill="#111111"/>
+  <circle cx="950" cy="500" r="6" fill="#111111"/>
+  <circle cx="1105" cy="500" r="6" fill="#111111"/>
+  <circle cx="1260" cy="500" r="6" fill="#111111"/>
+  <circle cx="1415" cy="500" r="6" fill="#111111"/>
+  <circle cx="1415" cy="325" r="6" fill="#111111"/>
+  <circle cx="1415" cy="150" r="6" fill="#111111"/>
+  <circle cx="1570" cy="150" r="6" fill="#111111"/>
+
+  <!-- 步长标注：向上 = 1/P -->
+  <line x1="1436" y1="492" x2="1436" y2="336" stroke="#1565c0" stroke-width="4" marker-end="url(#arwBlue)"/>
+  <text x="1450" y="425" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="25" fill="#1565c0">划入正类 → 纵轴 + 1/P</text>
+
+  <!-- 步长标注：向右 = 1/N -->
+  <line x1="1240" y1="520" x2="1356" y2="520" stroke="#e65100" stroke-width="4" marker-end="url(#arwOrange)"/>
+  <text x="1299" y="560" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="25" fill="#e65100">划入反类 → 横轴 + 1/N</text>
+
+  <!-- AUC 标注 -->
+  <text x="1080" y="790" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="27" fill="#0d47a1">阴影面积 = AUC = 0.625</text>
+
+  <!-- 轴标题 -->
+  <text x="1260" y="935" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="26" fill="#111111">FPR = FP / N（反类被误判的比例）</text>
+  <text x="860" y="500" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="26" fill="#111111" transform="rotate(-90 860 500)">TPR = TP / P（正类被正确识别的比例）</text>
+</svg>
