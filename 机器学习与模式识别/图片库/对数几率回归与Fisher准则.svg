@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" width="1800" height="900">
+  <defs>
+    <marker id="aDark" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="13.6" refY="8" orient="auto" viewBox="0 0 16 16">
+      <path d="M0.8,1.2 L15.2,8 L0.8,14.8 Z" fill="#111111"/>
+    </marker>
+    <marker id="aGray" markerUnits="userSpaceOnUse" markerWidth="15" markerHeight="15" refX="12.7" refY="7.5" orient="auto" viewBox="0 0 15 15">
+      <path d="M0.8,1.2 L14.2,7.5 L0.8,13.8 Z" fill="#777777"/>
+    </marker>
+    <marker id="aRed" markerUnits="userSpaceOnUse" markerWidth="15" markerHeight="15" refX="12.7" refY="7.5" orient="auto" viewBox="0 0 15 15">
+      <path d="M0.8,1.2 L14.2,7.5 L0.8,13.8 Z" fill="#c62828"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1800" height="900" fill="#ffffff"/>
+
+  <!-- ================= ① 对数几率回归 ================= -->
+  <text x="100" y="90" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="30" font-weight="bold" fill="#111111">① 对数几率回归：sigmoid 把线性打分压成概率</text>
+
+  <!-- 坐标轴 -->
+  <line x1="106" y1="700" x2="726" y2="700" stroke="#111111" stroke-width="3" marker-end="url(#aDark)"/>
+  <line x1="106" y1="700" x2="106" y2="136" stroke="#111111" stroke-width="3" marker-end="url(#aDark)"/>
+
+  <!-- x 刻度 -->
+  <line x1="148" y1="695" x2="148" y2="705" stroke="#111111" stroke-width="3"/>
+  <line x1="232" y1="695" x2="232" y2="705" stroke="#111111" stroke-width="3"/>
+  <line x1="316" y1="695" x2="316" y2="705" stroke="#111111" stroke-width="3"/>
+  <line x1="400" y1="695" x2="400" y2="705" stroke="#111111" stroke-width="3"/>
+  <line x1="484" y1="695" x2="484" y2="705" stroke="#111111" stroke-width="3"/>
+  <line x1="568" y1="695" x2="568" y2="705" stroke="#111111" stroke-width="3"/>
+  <line x1="652" y1="695" x2="652" y2="705" stroke="#111111" stroke-width="3"/>
+  <text x="148" y="732" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">&#8722;6</text>
+  <text x="232" y="732" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">&#8722;4</text>
+  <text x="316" y="732" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">&#8722;2</text>
+  <text x="400" y="732" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">0</text>
+  <text x="484" y="732" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">2</text>
+  <text x="568" y="732" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">4</text>
+  <text x="652" y="732" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#555555">6</text>
+
+  <!-- y 刻度 -->
+  <line x1="101" y1="700" x2="111" y2="700" stroke="#111111" stroke-width="3"/>
+  <line x1="101" y1="570" x2="111" y2="570" stroke="#111111" stroke-width="3"/>
+  <line x1="101" y1="440" x2="111" y2="440" stroke="#111111" stroke-width="3"/>
+  <line x1="101" y1="310" x2="111" y2="310" stroke="#111111" stroke-width="3"/>
+  <line x1="101" y1="180" x2="111" y2="180" stroke="#111111" stroke-width="3"/>
+  <text x="94" y="708" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">0</text>
+  <text x="94" y="578" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">0.25</text>
+  <text x="94" y="448" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">0.5</text>
+  <text x="94" y="318" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">0.75</text>
+  <text x="94" y="188" text-anchor="end" font-family="Georgia, serif" font-size="22" fill="#555555">1</text>
+
+  <!-- 决策边界十字线 -->
+  <line x1="106" y1="440" x2="400" y2="440" stroke="#999999" stroke-width="2.5" stroke-dasharray="10 8"/>
+  <line x1="400" y1="700" x2="400" y2="440" stroke="#999999" stroke-width="2.5" stroke-dasharray="10 8"/>
+
+  <!-- sigmoid 曲线 -->
+  <polyline points="106,699.5 148,698.3 190,696.5 232,690.6 274,675.3 295,660.6 316,638.0 337,605.1 358,560.2 379,503.7 400,440 421,376.3 442,319.8 463,274.9 484,242.0 505,219.4 526,204.7 568,189.4 610,183.5 652,181.5 694,180.5"
+            fill="none" stroke="#111111" stroke-width="5"/>
+  <circle cx="400" cy="440" r="9" fill="#c62828"/>
+
+  <!-- 标注 -->
+  <text x="140" y="232" font-family="Georgia, serif" font-style="italic" font-size="28" fill="#c62828">&#963;(z) = 1 / (1 + e<tspan font-size="20" dy="-10">&#8722;z</tspan><tspan font-size="28" dy="10">)</tspan></text>
+  <text x="140" y="196" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#555555">logit：ln( p / (1&#8722;p) ) = z，即 p = &#963;(z)</text>
+  <text x="150" y="600" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#555555">z &lt; 0 &#8594; 判为 0 类</text>
+  <text x="600" y="330" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#555555">z &gt; 0 &#8594; 判为 1 类</text>
+  <text x="418" y="424" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#c62828">决策边界 z = 0（p = 0.5）</text>
+  <text x="416" y="768" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="26" fill="#111111">z = w<tspan font-size="19" dy="-9">T</tspan><tspan font-size="26" dy="9">x + b</tspan></text>
+  <text x="60" y="420" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="26" fill="#111111" transform="rotate(-90 60 420)">P(y = 1 | x)</text>
+
+  <!-- ================= ② Fisher 准则 ================= -->
+  <text x="980" y="90" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="30" font-weight="bold" fill="#111111">② Fisher 准则：找一条让两类投影后分得最开的直线</text>
+
+  <!-- 投影轴 -->
+  <line x1="1035" y1="555" x2="1443" y2="219" stroke="#777777" stroke-width="3" marker-end="url(#aGray)"/>
+  <text x="1390" y="196" text-anchor="end" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#666666">投影方向 w（即下方横轴）</text>
+
+  <!-- 投影垂线 -->
+  <line x1="1160" y1="485" x2="1134" y2="454" stroke="#c62828" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <circle cx="1134" cy="454" r="6" fill="#c62828"/>
+  <line x1="1295" y1="270" x2="1320" y2="301" stroke="#1565c0" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <circle cx="1320" cy="301" r="6" fill="#1565c0"/>
+
+  <!-- 反类散点 -->
+  <circle cx="1095" cy="470" r="9" fill="#ffffff" stroke="#c62828" stroke-width="3.5"/>
+  <circle cx="1125" cy="415" r="9" fill="#ffffff" stroke="#c62828" stroke-width="3.5"/>
+  <circle cx="1160" cy="485" r="9" fill="#ffffff" stroke="#c62828" stroke-width="3.5"/>
+  <circle cx="1110" cy="430" r="9" fill="#ffffff" stroke="#c62828" stroke-width="3.5"/>
+  <circle cx="1185" cy="435" r="9" fill="#ffffff" stroke="#c62828" stroke-width="3.5"/>
+  <circle cx="1150" cy="460" r="9" fill="#ffffff" stroke="#c62828" stroke-width="3.5"/>
+  <circle cx="1120" cy="480" r="9" fill="#ffffff" stroke="#c62828" stroke-width="3.5"/>
+
+  <!-- 正类散点 -->
+  <circle cx="1260" cy="325" r="9" fill="#1565c0"/>
+  <circle cx="1295" cy="270" r="9" fill="#1565c0"/>
+  <circle cx="1325" cy="350" r="9" fill="#1565c0"/>
+  <circle cx="1285" cy="295" r="9" fill="#1565c0"/>
+  <circle cx="1360" cy="300" r="9" fill="#1565c0"/>
+  <circle cx="1320" cy="325" r="9" fill="#1565c0"/>
+  <circle cx="1290" cy="340" r="9" fill="#1565c0"/>
+
+  <!-- 图例 -->
+  <circle cx="1050" cy="238" r="10" fill="#1565c0"/>
+  <text x="1072" y="247" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#333333">正类</text>
+  <circle cx="1050" cy="280" r="10" fill="#ffffff" stroke="#c62828" stroke-width="3.5"/>
+  <text x="1072" y="289" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#333333">反类</text>
+
+  <!-- 一维投影视图 -->
+  <line x1="1020" y1="770" x2="1748" y2="770" stroke="#111111" stroke-width="3" marker-end="url(#aDark)"/>
+  <text x="1050" y="808" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#111111">投影后的取值 w<tspan font-size="18" dy="-8">T</tspan><tspan font-size="24" dy="8">x</tspan></text>
+
+  <polygon points="1050,768.8 1088,761.2 1125,734.3 1163,687.0 1200,660 1238,687.0 1275,734.3 1313,761.2 1350,768.8 1350,770 1050,770"
+           fill="#c62828" fill-opacity="0.16" stroke="#c62828" stroke-width="2.5"/>
+  <polygon points="1330,768.8 1368,761.2 1405,734.3 1443,687.0 1480,660 1518,687.0 1555,734.3 1593,761.2 1630,768.8 1630,770 1330,770"
+           fill="#1565c0" fill-opacity="0.16" stroke="#1565c0" stroke-width="2.5"/>
+  <text x="1200" y="638" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#c62828">反类</text>
+  <text x="1480" y="638" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#1565c0">正类</text>
+
+  <!-- 类间距离 -->
+  <line x1="1200" y1="606" x2="1478" y2="606" stroke="#c62828" stroke-width="2.5" marker-end="url(#aRed)"/>
+  <line x1="1480" y1="606" x2="1202" y2="606" stroke="#c62828" stroke-width="2.5" marker-end="url(#aRed)"/>
+  <text x="1340" y="586" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#c62828">类间距离：越大越好</text>
+
+  <!-- 类内散布 -->
+  <line x1="1330" y1="812" x2="1628" y2="812" stroke="#1565c0" stroke-width="2.5" marker-end="url(#aGray)"/>
+  <line x1="1630" y1="812" x2="1332" y2="812" stroke="#1565c0" stroke-width="2.5" marker-end="url(#aGray)"/>
+  <text x="1480" y="852" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#1565c0">类内散布：越小越好</text>
+</svg>
