@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 640" width="1420" height="640">
+  <defs>
+    <marker id="mkDark" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" refX="15.5" refY="9" orient="auto" viewBox="0 0 18 18">
+      <path d="M1,1.4 L17,9 L1,16.6 Z" fill="#444444"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1420" height="640" fill="#ffffff"/>
+
+  <!-- ================= 左：独木舟（病态） ================= -->
+  <text x="400" y="118" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="30" font-weight="bold" fill="#111111">① 未归一化：病态，独木舟（峡谷）</text>
+  <text x="400" y="166" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#555555">条件数 &#954; = &#955;<tspan font-size="17" dy="5">max</tspan><tspan font-size="24" dy="-5"> / &#955;</tspan><tspan font-size="17" dy="5">min</tspan><tspan font-size="24" dy="-5"> &#8811; 1</tspan></text>
+
+  <ellipse cx="400" cy="340" rx="200" ry="62" fill="none" stroke="#9db8d2" stroke-width="2.5"/>
+  <ellipse cx="400" cy="340" rx="150" ry="46.5" fill="none" stroke="#9db8d2" stroke-width="2.5"/>
+  <ellipse cx="400" cy="340" rx="100" ry="31" fill="none" stroke="#9db8d2" stroke-width="2.5"/>
+  <ellipse cx="400" cy="340" rx="50" ry="15.5" fill="none" stroke="#9db8d2" stroke-width="2.5"/>
+
+  <polyline points="170.0,385.0 183.8,301.8 196.8,372.5 209.0,312.4 220.4,363.5 231.2,320.0 241.3,357.0 250.8,325.6 259.8,352.3 268.2,329.6 276.1,348.9 283.5,332.5 290.5,346.4"
+            fill="none" stroke="#c62828" stroke-width="3"/>
+  <circle cx="183.8" cy="301.8" r="4.5" fill="#c62828"/>
+  <circle cx="196.8" cy="372.5" r="4.5" fill="#c62828"/>
+  <circle cx="209.0" cy="312.4" r="4.5" fill="#c62828"/>
+  <circle cx="220.4" cy="363.5" r="4.5" fill="#c62828"/>
+  <circle cx="231.2" cy="320.0" r="4.5" fill="#c62828"/>
+  <circle cx="241.3" cy="357.0" r="4.5" fill="#c62828"/>
+  <circle cx="250.8" cy="325.6" r="4.5" fill="#c62828"/>
+  <circle cx="259.8" cy="352.3" r="4.5" fill="#c62828"/>
+  <circle cx="268.2" cy="329.6" r="4.5" fill="#c62828"/>
+  <circle cx="276.1" cy="348.9" r="4.5" fill="#c62828"/>
+  <circle cx="283.5" cy="332.5" r="4.5" fill="#c62828"/>
+  <circle cx="290.5" cy="346.4" r="4.5" fill="#c62828"/>
+
+  <circle cx="170" cy="385" r="9" fill="#2e7d32"/>
+  <text x="152" y="418" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#2e7d32">起点</text>
+  <circle cx="400" cy="340" r="8" fill="#111111"/>
+  <text x="416" y="318" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#111111">最小值</text>
+
+  <text x="400" y="540" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#c62828">沿陡峭方向来回震荡，沿平缓方向爬得极慢</text>
+
+  <!-- ================= 中间箭头 ================= -->
+  <line x1="650" y1="340" x2="853" y2="340" stroke="#444444" stroke-width="4.5" marker-end="url(#mkDark)"/>
+  <text x="752" y="312" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="28" font-weight="bold" fill="#444444">归一化</text>
+  <text x="752" y="390" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="22" fill="#666666">拉齐各方向尺度</text>
+
+  <!-- ================= 右：大碗（良态） ================= -->
+  <text x="1100" y="118" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="30" font-weight="bold" fill="#111111">② 归一化之后：良态，大碗</text>
+  <text x="1100" y="166" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#555555">条件数 &#954; &#8776; 1，等高线接近圆形</text>
+
+  <circle cx="1100" cy="340" r="200" fill="none" stroke="#9db8d2" stroke-width="2.5"/>
+  <circle cx="1100" cy="340" r="150" fill="none" stroke="#9db8d2" stroke-width="2.5"/>
+  <circle cx="1100" cy="340" r="100" fill="none" stroke="#9db8d2" stroke-width="2.5"/>
+  <circle cx="1100" cy="340" r="50" fill="none" stroke="#9db8d2" stroke-width="2.5"/>
+
+  <polyline points="870,385 973.5,364.8 1030.4,353.6 1061.7,347.5 1079.0,344.1 1088.4,342.3 1093.6,341.3 1096.5,340.7"
+            fill="none" stroke="#1565c0" stroke-width="3"/>
+  <circle cx="973.5" cy="364.8" r="4.5" fill="#1565c0"/>
+  <circle cx="1030.4" cy="353.6" r="4.5" fill="#1565c0"/>
+  <circle cx="1061.7" cy="347.5" r="4.5" fill="#1565c0"/>
+  <circle cx="1079.0" cy="344.1" r="4.5" fill="#1565c0"/>
+  <circle cx="1088.4" cy="342.3" r="4.5" fill="#1565c0"/>
+  <circle cx="1093.6" cy="341.3" r="4.5" fill="#1565c0"/>
+
+  <circle cx="870" cy="385" r="9" fill="#2e7d32"/>
+  <text x="852" y="418" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#2e7d32">起点</text>
+  <circle cx="1100" cy="340" r="8" fill="#111111"/>
+  <text x="1116" y="318" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="23" fill="#111111">最小值</text>
+
+  <text x="1100" y="540" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="24" fill="#1565c0">每步都直指谷底：可用更大学习率，收敛更快</text>
+</svg>
