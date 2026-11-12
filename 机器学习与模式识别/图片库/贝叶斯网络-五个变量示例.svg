@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" width="900" height="760">
+  <defs>
+    <marker id="aD" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" refX="15.5" refY="9" orient="auto" viewBox="0 0 18 18">
+      <path d="M1,1.4 L17,9 L1,16.6 Z" fill="#111111"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="760" fill="#ffffff"/>
+
+  <text x="450" y="52" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="26" font-weight="bold" fill="#111111">贝叶斯网络：五个变量的有向无环图</text>
+
+  <!-- 边 -->
+  <line x1="421.3" y1="154.9" x2="248.7" y2="305.1" stroke="#111111" stroke-width="3" marker-end="url(#aD)"/>
+  <line x1="478.7" y1="154.9" x2="651.3" y2="305.1" stroke="#111111" stroke-width="3" marker-end="url(#aD)"/>
+  <line x1="248.7" y1="354.9" x2="421.3" y2="505.1" stroke="#111111" stroke-width="3" marker-end="url(#aD)"/>
+  <line x1="651.3" y1="354.9" x2="478.7" y2="505.1" stroke="#111111" stroke-width="3" marker-end="url(#aD)"/>
+  <line x1="450" y1="568" x2="450" y2="652" stroke="#111111" stroke-width="3" marker-end="url(#aD)"/>
+
+  <!-- 节点 -->
+  <circle cx="450" cy="130" r="38" fill="#e8f0fb" stroke="#1565c0" stroke-width="3.5"/>
+  <text x="450" y="143" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="34" fill="#0d3f74">x<tspan font-size="21" dy="7">1</tspan></text>
+
+  <circle cx="220" cy="330" r="38" fill="#f7f7f7" stroke="#111111" stroke-width="3.5"/>
+  <text x="220" y="343" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="34" fill="#111111">x<tspan font-size="21" dy="7">2</tspan></text>
+
+  <circle cx="680" cy="330" r="38" fill="#f7f7f7" stroke="#111111" stroke-width="3.5"/>
+  <text x="680" y="343" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="34" fill="#111111">x<tspan font-size="21" dy="7">3</tspan></text>
+
+  <circle cx="450" cy="530" r="38" fill="#fff4e6" stroke="#e65100" stroke-width="3.5"/>
+  <text x="450" y="543" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="34" fill="#8a3b00">x<tspan font-size="21" dy="7">4</tspan></text>
+
+  <circle cx="450" cy="690" r="38" fill="#f7f7f7" stroke="#111111" stroke-width="3.5"/>
+  <text x="450" y="703" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="34" fill="#111111">x<tspan font-size="21" dy="7">5</tspan></text>
+
+  <!-- 注释 -->
+  <text x="500" y="120" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="20" fill="#555555">根节点（无父）</text>
+  <text x="500" y="516" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="20" fill="#e65100">碰撞节点：两个父</text>
+  <text x="506" y="700" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="20" fill="#555555">叶节点</text>
+
+  <text x="500" y="150" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="20" fill="#555555">（也是 x₂、x₃ 的共同父）</text>
+</svg>
